@@ -8,7 +8,21 @@ namespace Seminar3
         {
             Console.WriteLine("Hello World!");
         }
+        public static bool Prolezet(int x, int y, int z, int a, int b)
+        {
+            if (CompareXYAB(x, y, a, b) || CompareXYAB(x, z, a, b) || CompareXYAB(z, y, a, b))
+                return true;
+            else
+                return false;
+        }
 
+        public static bool CompareXYAB(int x, int y, int a, int b)
+        {
+            if ((x == a && y == b) || (y == a && x == b))
+                return true;
+            else
+                return false;
+        }
         public static string IsStepCorrect(int x0, int y0, int x1, int y1, Chessman chessman)
         {
             if (chessman == Chessman.Ladya)
