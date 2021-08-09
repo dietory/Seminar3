@@ -9,6 +9,13 @@ namespace Seminar3
             Console.WriteLine("Hello World!");
         }
 
+        public static bool AreIntersect(int a, int b, int c, int d)
+        {
+            if ((a < c && b > c) || (c < a && d > a))
+                return true;
+            else
+                return false;
+        }
         public static bool HappyTicket (int ticketNumber)
         {
             string tnLess = (ticketNumber - 1).ToString();
