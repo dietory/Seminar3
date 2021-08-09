@@ -8,6 +8,18 @@ namespace Seminar3
         {
             Console.WriteLine("Hello World!");
         }
+
+        public static bool HappyTicket (int ticketNumber)
+        {
+            string tnLess = (ticketNumber - 1).ToString();
+            string tnMore = (ticketNumber + 1).ToString();
+            bool htLess = (Convert.ToInt32(tnLess[0]) + Convert.ToInt32(tnLess[1]) + Convert.ToInt32(tnLess[2]))
+                == (Convert.ToInt32(tnLess[3]) + Convert.ToInt32(tnLess[4]) + Convert.ToInt32(tnLess[5]));
+            bool htMore = (Convert.ToInt32(tnMore[0]) + Convert.ToInt32(tnMore[1]) + Convert.ToInt32(tnMore[2]))
+                == (Convert.ToInt32(tnMore[3]) + Convert.ToInt32(tnMore[4]) + Convert.ToInt32(tnMore[5]));
+            return htLess || htMore;
+        }
+
         public static bool Prolezet(int x, int y, int z, int a, int b)
         {
             if (CompareXYAB(x, y, a, b) || CompareXYAB(x, z, a, b) || CompareXYAB(z, y, a, b))
